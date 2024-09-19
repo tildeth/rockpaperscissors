@@ -49,7 +49,7 @@ function addShakeAnimation(){
     player2.classList.add("shake");
 }
 
-function removeShakeAnimation(){
+function removeShakeAnimation(){ 
         player1.classList.remove("shake");
         player2.classList.remove("shake");
 }
