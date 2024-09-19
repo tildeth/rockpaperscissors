@@ -50,10 +50,8 @@ function addShakeAnimation(){
 }
 
 function removeShakeAnimation(){
-    setTimeout(()=>{
         player1.classList.remove("shake");
         player2.classList.remove("shake");
-    }, 1500);
 }
 
 function showResult(result){
@@ -69,13 +67,15 @@ function showResult(result){
 
 function playRound(playerChoice){
     const computerChoice = getComputerChoice();    addShakeAnimation();
-    updatePlayerGraphics(playerChoice, computerChoice);
     setTimeout(()=>{
+        removeShakeAnimation();
+        updatePlayerGraphics(playerChoice, computerChoice);
         const result = determineWinner (playerChoice, computerChoice);
 
         showResult(result);
-        removeShakeAnimation();
-    }, 1500);
+        
+    },1800);
+    
 }
 
 rockButton.addEventListener("click", function(){
